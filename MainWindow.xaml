@@ -1,0 +1,29 @@
+﻿<Window x:Class="FocusPocus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FocusPocus"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="800" MinWidth="1200" MaxHeight="800" MaxWidth="1200" Icon="/icon.ico">
+    <Grid >
+        <Image Source="Images\fon.jpg" Stretch="Fill"/>
+        <Image Source="/logo.png" Stretch="Fill" Margin="236,80,860,607"/>
+        <Label Content="FocusPocus" FontSize="80" Foreground="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,54,0,0" FontFamily="Segoe Print" Height="142" Width="460" FontWeight="Bold"/>
+        <Button Content="Авторизация" x:Name="Log" Click="Log_Click" FontFamily="Segoe Print" FontSize="26" Background="WhiteSmoke" HorizontalAlignment="Center" Height="54" Margin="0,338,0,0" VerticalAlignment="Top" Width="376" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Войти как гость" x:Name="LogIn" Click="LogIn_Click" FontFamily="Segoe Print" FontSize="26" Background="WhiteSmoke" HorizontalAlignment="Center" Height="60" Margin="0,440,0,0" VerticalAlignment="Top" Width="376" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="ювелирный интернет-магазин" FontSize="30" Foreground="Beige" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,177,0,0" FontFamily="Segoe Print" Height="78" Width="520" FontWeight="Bold" FontStyle="Italic"/>
+    </Grid>
+</Window>

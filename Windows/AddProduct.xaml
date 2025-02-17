@@ -1,0 +1,44 @@
+﻿<Window x:Class="FocusPocus.Windows.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FocusPocus.Windows"
+        mc:Ignorable="d"
+        Title="AddProduct" MinHeight="900" MinWidth="1200" MaxHeight="900" MaxWidth="1200" Icon="/icon.ico">
+    <Grid>
+        <Image Source="..\Images\fon.jpg" Stretch="Fill"/>
+        <Label Content="Введите данные" FontSize="20"  Foreground="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Segoe Print" Height="78" Width="266" FontWeight="Bold" Margin="0,23,0,0"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,228,0,0" TextWrapping="Wrap" Text="{Binding ProductName}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Артикул" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="60" Width="143" FontWeight="Bold" Margin="31,66,0,0"/>
+        <TextBox x:Name="Article" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,124,0,0" TextWrapping="Wrap" Text="{Binding ProductArticleNumber}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Наименование" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="60" Width="200" FontWeight="Bold" Margin="31,168,0,0"/>
+        <TextBox x:Name="Cost" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,329,0,0" TextWrapping="Wrap" Text="{Binding ProductCost}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Стоимость" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="200" FontWeight="Bold" Margin="31,271,0,0"/>
+        <TextBox x:Name="Description" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,426,0,0" TextWrapping="Wrap" Text="{Binding ProductDescription}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Описание" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="200" FontWeight="Bold" Margin="31,372,0,0"/>
+        <TextBox x:Name="Quantity" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,517,0,0" TextWrapping="Wrap" Text="{Binding ProductQuantityInStock}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Кол-во на складе" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="249" FontWeight="Bold" Margin="31,463,0,0"/>
+        <ComboBox x:Name="Manufacturer" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,613,0,0" DisplayMemberPath="ManufacturerName" SelectedItem="{Binding Manufacturer}" VerticalAlignment="Top" Width="778" Height="37"/>
+        <Label Content="Производитель" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="249" FontWeight="Bold" Margin="31,559,0,0"/>
+        <ComboBox x:Name="Provider" DisplayMemberPath="ProviderName" SelectedItem="{Binding Provider}" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Margin="31,704,0,0" Text="" VerticalAlignment="Top" Width="778" Height="37"/>
+        <ComboBox x:Name="Category" DisplayMemberPath="CategoryName" SelectedItem="{Binding Category}" HorizontalAlignment="Left" FontSize="20" FontFamily="Segoe Print" Background="WhiteSmoke" Text="" VerticalAlignment="Top" Width="778" Height="38" Margin="31,795,0,0"/>
+        <Label Content="Поставщик" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="200" FontWeight="Bold" Margin="31,655,0,0"/>
+        <Label Content="Категория" FontSize="25" Foreground="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print" Height="49" Width="200" FontWeight="Bold" Margin="31,741,0,0"/>
+        <Button Content="Добавить" x:Name="Add" Click="Add_Click" FontFamily="Segoe Print" FontSize="26" Background="WhiteSmoke" HorizontalAlignment="Left" Height="86" Margin="892,410,0,0" VerticalAlignment="Top" Width="240" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Отмена" x:Name="Back" Click="Back_Click" FontFamily="Segoe Print" FontSize="26" Background="WhiteSmoke" HorizontalAlignment="Left" Height="53" Margin="892,523,0,0" VerticalAlignment="Top" Width="240" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image Source="/logo.png" Stretch="Fill" Margin="1067,39,38,783"/>
+    </Grid>
+</Window>
